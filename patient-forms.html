@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form - Riverside Primary & Walk-In Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h2>Riverside Primary Care</h2>
+                    <p class="tagline">Walk-In & Urgent Care</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="physician.html">Our Doctor</a></li>
+                    <li><a href="patient-forms.html" class="active">Patient Forms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Patient Registration Form</h1>
+            <p>Please complete this form before your visit</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-intro">
+                <p>Thank you for choosing Riverside Primary & Walk-In Care. Please fill out this registration form completely. All information is confidential and will be used only for medical purposes.</p>
+                <p class="note"><strong>Note:</strong> Fields marked with an asterisk (*) are required.</p>
+            </div>
+
+            <form id="patientForm" class="patient-form">
+                <!-- Personal Information -->
+                <div class="form-section-header">
+                    <h2>Personal Information</h2>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="middleName">Middle Name</label>
+                        <input type="text" id="middleName" name="middleName">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender *</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select...</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ssn">Social Security Number</label>
+                        <input type="text" id="ssn" name="ssn" placeholder="XXX-XX-XXXX">
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-section-header">
+                    <h2>Contact Information</h2>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="address">Street Address *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code *</label>
+                        <input type="text" id="zip" name="zip" required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact Name *</label>
+                        <input type="text" id="emergencyContact" name="emergencyContact" required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="emergencyPhone">Emergency Contact Phone *</label>
+                        <input type="tel" id="emergencyPhone" name="emergencyPhone" placeholder="(555) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyRelation">Relationship *</label>
+                        <input type="text" id="emergencyRelation" name="emergencyRelation" placeholder="e.g., Spouse, Parent, Sibling" required>
+                    </div>
+                </div>
+
+                <!-- Insurance Information -->
+                <div class="form-section-header">
+                    <h2>Insurance Information</h2>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="insuranceCompany">Insurance Company *</label>
+                        <input type="text" id="insuranceCompany" name="insuranceCompany" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="policyNumber">Policy Number *</label>
+                        <input type="text" id="policyNumber" name="policyNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="groupNumber">Group Number</label>
+                        <input type="text" id="groupNumber" name="groupNumber">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="policyHolder">Policy Holder Name *</label>
+                        <input type="text" id="policyHolder" name="policyHolder" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="relationToPatient">Relation to Patient *</label>
+                        <select id="relationToPatient" name="relationToPatient" required>
+                            <option value="">Select...</option>
+                            <option value="self">Self</option>
+                            <option value="spouse">Spouse</option>
+                            <option value="parent">Parent</option>
+                            <option value="child">Child</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Medical History -->
+                <div class="form-section-header">
+                    <h2>Medical History</h2>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="reasonForVisit">Reason for Today's Visit *</label>
+                    <textarea id="reasonForVisit" name="reasonForVisit" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="currentMedications">Current Medications (List all medications, dosages, and frequency)</label>
+                    <textarea id="currentMedications" name="currentMedications" rows="4" placeholder="Example: Lisinopril 10mg once daily, Aspirin 81mg once daily"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="allergies">Allergies (Medications, Foods, Environmental) *</label>
+                    <textarea id="allergies" name="allergies" rows="3" placeholder="List all known allergies or write 'None'" required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Do you have or have you had any of the following conditions? (Check all that apply)</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="diabetes">
+                            <span>Diabetes</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="hypertension">
+                            <span>High Blood Pressure</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="heart-disease">
+                            <span>Heart Disease</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="asthma">
+                            <span>Asthma</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="copd">
+                            <span>COPD</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="cancer">
+                            <span>Cancer</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="kidney-disease">
+                            <span>Kidney Disease</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="liver-disease">
+                            <span>Liver Disease</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="thyroid">
+                            <span>Thyroid Problems</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="depression">
+                            <span>Depression/Anxiety</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="stroke">
+                            <span>Stroke</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="conditions" value="arthritis">
+                            <span>Arthritis</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="pastSurgeries">Past Surgeries or Hospitalizations</label>
+                    <textarea id="pastSurgeries" name="pastSurgeries" rows="3" placeholder="List any previous surgeries or hospital stays with approximate dates"></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="familyHistory">Family Medical History (List any significant conditions in immediate family members)</label>
+                    <textarea id="familyHistory" name="familyHistory" rows="3" placeholder="Example: Father - heart disease, Mother - diabetes"></textarea>
+                </div>
+
+                <!-- Social History -->
+                <div class="form-section-header">
+                    <h2>Social History</h2>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="smoking">Do you smoke? *</label>
+                        <select id="smoking" name="smoking" required>
+                            <option value="">Select...</option>
+                            <option value="never">Never</option>
+                            <option value="former">Former smoker</option>
+                            <option value="current">Current smoker</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alcohol">Alcohol use? *</label>
+                        <select id="alcohol" name="alcohol" required>
+                            <option value="">Select...</option>
+                            <option value="none">None</option>
+                            <option value="occasional">Occasional</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="heavy">Heavy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exercise">Exercise frequency? *</label>
+                        <select id="exercise" name="exercise" required>
+                            <option value="">Select...</option>
+                            <option value="none">None</option>
+                            <option value="1-2">1-2 times/week</option>
+                            <option value="3-4">3-4 times/week</option>
+                            <option value="5+">5+ times/week</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+
+                <!-- For Women Only -->
+                <div class="form-section-header">
+                    <h2>For Women Only</h2>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="pregnant">Are you currently pregnant?</label>
+                        <select id="pregnant" name="pregnant">
+                            <option value="">Select...</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="not-sure">Not sure</option>
+                            <option value="n/a">N/A</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="breastfeeding">Are you currently breastfeeding?</label>
+                        <select id="breastfeeding" name="breastfeeding">
+                            <option value="">Select...</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="n/a">N/A</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastMenstrual">Date of Last Menstrual Period</label>
+                        <input type="date" id="lastMenstrual" name="lastMenstrual">
+                    </div>
+                </div>
+
+                <!-- Review of Systems -->
+                <div class="form-section-header">
+                    <h2>Current Symptoms (Check all that apply)</h2>
+                </div>
+
+                <div class="form-group full-width">
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="fever">
+                            <span>Fever</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="chills">
+                            <span>Chills</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="fatigue">
+                            <span>Fatigue</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="weight-loss">
+                            <span>Weight Loss</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="weight-gain">
+                            <span>Weight Gain</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="headache">
+                            <span>Headache</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="dizziness">
+                            <span>Dizziness</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="chest-pain">
+                            <span>Chest Pain</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="shortness-breath">
+                            <span>Shortness of Breath</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="cough">
+                            <span>Cough</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="nausea">
+                            <span>Nausea</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="vomiting">
+                            <span>Vomiting</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="diarrhea">
+                            <span>Diarrhea</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="constipation">
+                            <span>Constipation</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="abdominal-pain">
+                            <span>Abdominal Pain</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="joint-pain">
+                            <span>Joint Pain</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="back-pain">
+                            <span>Back Pain</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="symptoms" value="rash">
+                            <span>Rash</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="additionalInfo">Additional Information or Concerns</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Please share any other information you think is important for your care"></textarea>
+                </div>
+
+                <!-- Consent and Authorization -->
+                <div class="form-section-header">
+                    <h2>Consent and Authorization</h2>
+                </div>
+
+                <div class="form-group full-width">
+                    <label class="checkbox-label consent-label">
+                        <input type="checkbox" name="consent" required>
+                        <span>I certify that the information provided is true and accurate to the best of my knowledge. I authorize Riverside Primary & Walk-In Care to use and disclose my health information for treatment, payment, and healthcare operations. *</span>
+                    </label>
+                </div>
+
+                <div class="form-group full-width">
+                    <label class="checkbox-label consent-label">
+                        <input type="checkbox" name="hipaa" required>
+                        <span>I acknowledge that I have received and reviewed the HIPAA Notice of Privacy Practices. *</span>
+                    </label>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="signature">Patient Signature (Type Full Name) *</label>
+                        <input type="text" id="signature" name="signature" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signatureDate">Date *</label>
+                        <input type="date" id="signatureDate" name="signatureDate" required>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-large">Submit Registration Form</button>
+                    <button type="reset" class="btn btn-outline btn-large">Clear Form</button>
+                </div>
+            </form>
+
+            <div class="form-footer">
+                <p><strong>Privacy Notice:</strong> Your information is confidential and will only be used for medical purposes. We comply with all HIPAA regulations to protect your privacy.</p>
+                <p>If you have questions about this form, please call us at <a href="tel:555-789-4500">(555) 789-4500</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Riverside Primary Care</h3>
+                    <p>Quality healthcare when you need it most. Walk-in and urgent care services with no appointment necessary.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="physician.html">Our Doctor</a></li>
+                        <li><a href="patient-forms.html">Patient Forms</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>4200 Riverside Parkway, Suite 205<br>Meadowbrook, NJ 08055</p>
+                    <p>Phone: <a href="tel:555-789-4500">(555) 789-4500</a></p>
+                    <p>Fax: (555) 789-4501</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Riverside Primary & Walk-In Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="form-handler.js"></script>
+</body>
+</html>
